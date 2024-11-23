@@ -28,3 +28,24 @@ a:hover {
 p {
   color: #747990;
 }
+
+.btn,
+.btn-secondary {
+  background-color: #7703fc;
+  color: #fdfdfd;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: 0.4s;
+  cursor: pointer;
+  display: block;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-secondary {
+  background-color: #fdfdfd;
+  color: #283252;
+  border: 1px solid #cfcfcf;
+}
