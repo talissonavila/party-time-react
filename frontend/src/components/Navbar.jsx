@@ -4,7 +4,7 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <navbar id="navbar">
+    <nav id="navbar">
         <h2>Party Time</h2>
         <ul>
             <li>
@@ -14,7 +14,7 @@ const Navbar = () => {
                 <NavLink to="/party/new" className="btn">Create new party</NavLink>
             </li>
         </ul>
-    </navbar>
+    </nav>
   )
 }
 

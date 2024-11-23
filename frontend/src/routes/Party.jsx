@@ -19,7 +19,7 @@ const Party = () => {
 
         }
         loadParty();
-    }, []);
+    }, [id]);
 
     const handleDelete = async () => {
         const res = await partyFetch.delete(`/parties/${id}`);

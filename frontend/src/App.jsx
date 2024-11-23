@@ -3,7 +3,6 @@ import { ToastContainer } from "react-toastify";
 
 import Navbar from "./components/Navbar";
 
-import './App.css'
 import 'react-toastify/ReactToastify.css'
 
 function App() {
