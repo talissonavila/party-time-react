@@ -41,15 +41,15 @@ const partyController = {
     getOne: async (req, res) => {
         try {
             const id = req.params.id;
-            const parties = await PartyModel.findById(id);
+            const party = await PartyModel.findById(id);
 
             
-            if (!parties) {
-                res.status(404).json({ msg: "Parties not found" });
+            if (!party) {
+                res.status(404).json({ msg: "Party not found" });
                 return;
             }
 
-            res.json(parties);
+            res.json(party);
         } catch (error) {
             console.log(error);
         }
@@ -81,6 +81,11 @@ const partyController = {
                 image: req.body.image,
                 services: req.body.services,
             }
+            if (party.services && !checkPartyBudget(party.budget, party.services)) {
+                res.status(406).json({ msg: "Budget is not enough for the services" });
+                return;
+            }
+
             const updatedParty = await PartyModel.findByIdAndUpdate(id, party);
 
             if (!updatedParty) {
